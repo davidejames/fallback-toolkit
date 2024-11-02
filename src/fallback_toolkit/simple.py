@@ -1,6 +1,7 @@
 import functools
 from collections import defaultdict
 
+
 class FallbacksFailed(Exception):
     pass
 
@@ -13,7 +14,7 @@ def fallback(id=None):
 
         fallback_registry[id].append(func)
 
-        @functool.wraps(func)
+        @functools.wraps(func)
         def wrapper(*args, **kwargs):
             functions = fallback_registry[id]
             for _func in functions:
