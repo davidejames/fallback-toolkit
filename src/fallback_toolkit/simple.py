@@ -9,6 +9,7 @@ class FallbacksFailed(Exception):
 fallback_registry = defaultdict(list)
 
 
+
 def fallback(id=None):
     def decorator(func):
 
